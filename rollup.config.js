@@ -3,6 +3,7 @@ import typescript from 'rollup-plugin-typescript2';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { uglify } from 'rollup-plugin-uglify';
+import { main } from './package.json';
 
 const IS_PROD = !process.env.ROLLUP_WATCH;
 
@@ -11,7 +12,7 @@ export default [
     input: './src/background.ts',
     output: {
       name: 'background',
-      file: './dist/background.js',
+      file: main,
       format: 'umd'
     },
     plugins: [

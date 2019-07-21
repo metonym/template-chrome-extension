@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "Base template for Chrome extensions",
   "author": "Eric Liu (https://github.com/metonym)",
-  "main": "./dist/index.js",
+  "main": "./dist/background.js",
   "scripts": {
     "develop": "yarn clean && rollup -cw",
     "build": "yarn clean && rollup -c",
