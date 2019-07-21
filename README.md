@@ -1,5 +1,7 @@
 # template-chrome-extension
 
+[![Build Status](https://travis-ci.com/metonym/template-chrome-extension.svg?branch=master)](https://travis-ci.com/metonym/template-chrome-extension)
+
 > Base template for developing Chrome extensions.
 
 This project provides a boilerplate for developing Chrome extensions.
