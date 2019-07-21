@@ -2,7 +2,7 @@
   "name": "template-chrome-extension",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "Base template for Chrome extensions",
+  "description": "Base template for developing Chrome extensions",
   "author": "Eric Liu (https://github.com/metonym)",
   "main": "./dist/background.js",
   "scripts": {

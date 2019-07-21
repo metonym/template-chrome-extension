@@ -1,6 +1,8 @@
 # template-chrome-extension
 
-> Base template for Chrome extensions.
+> Base template for developing Chrome extensions.
+
+This project provides a boilerplate for developing Chrome extensions.
 
 ## Overview
 
