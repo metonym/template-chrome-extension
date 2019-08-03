@@ -1,8 +1,9 @@
 # template-chrome-extension
 
-[![Build Status](https://travis-ci.com/metonym/template-chrome-extension.svg?branch=master)](https://travis-ci.com/metonym/template-chrome-extension)
+[![Build][build]][build-badge]
+[![Coverage][codecov-shield]][codecov]
 
-> Base template for developing Chrome extensions.
+> Template for developing Chrome extensions.
 
 This project provides a boilerplate for developing Chrome extensions.
 
@@ -35,3 +36,8 @@ To ensure that committed code follows conventions, this project uses `prettier`,
 ## License
 
 [MIT](LICENSE)
+
+[build]: https://travis-ci.com/metonym/template-chrome-extension.svg?branch=master
+[build-badge]: https://travis-ci.com/metonym/template-chrome-extension
+[codecov]: https://codecov.io/gh/metonym/template-chrome-extension
+[codecov-shield]: https://img.shields.io/codecov/c/github/metonym/template-chrome-extension.svg
