@@ -10,7 +10,8 @@
     "build": "yarn clean && rollup -c",
     "clean": "node scripts/clean.js",
     "lint": "tslint --fix -p . -c tslint.json",
-    "test": "jest"
+    "test": "jest --coverage",
+    "test:tdd": "jest --watch"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
