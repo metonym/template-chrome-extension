@@ -3,6 +3,4 @@ const path = {
   outDir: './dist/'
 };
 
-module.exports = {
-  path
-};
+module.exports = { path };

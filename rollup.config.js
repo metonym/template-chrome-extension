@@ -10,21 +10,13 @@ const IS_PROD = !process.env.ROLLUP_WATCH;
 export default [
   {
     input: './src/background.ts',
-    output: {
-      name: 'background',
-      file: main,
-      format: 'umd'
-    },
+    output: { name: 'background', file: main, format: 'umd' },
     plugins: [
       json(),
       typescript({
         clean: IS_PROD,
         cacheRoot: './.cache',
-        tsconfigOverride: IS_PROD
-          ? {
-              exclude: ['./src/tests']
-            }
-          : undefined
+        tsconfigOverride: IS_PROD ? { exclude: ['./src/tests'] } : undefined
       }),
       commonjs(),
       resolve(),
