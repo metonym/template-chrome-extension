@@ -16,7 +16,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "@types/chrome": "^0.0.88",
+    "@types/chrome": "^0.0.89",
     "@types/fs-extra": "^8.0.0",
     "@types/jest": "^24.0.17",
     "fs-extra": "^8.1.0",
