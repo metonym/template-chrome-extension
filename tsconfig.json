@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
+    "lib": ["dom", "esnext"],
     "module": "esnext",
-    "moduleResolution": "node",
-    "outDir": "./dist",
-    "removeComments": true,
     "strict": true,
     "target": "es5"
   },
-  "include": ["./src"]
+  "include": ["src"]
 }
