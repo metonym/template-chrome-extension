@@ -1,4 +1,3 @@
-import json from 'rollup-plugin-json';
 import typescript from 'rollup-plugin-typescript2';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
@@ -12,7 +11,6 @@ export default [
     input: './src/background.ts',
     output: { name: 'background', file: main, format: 'umd' },
     plugins: [
-      json(),
       typescript({
         clean: IS_PROD,
         cacheRoot: './.cache',
