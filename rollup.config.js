@@ -1,24 +1,43 @@
-import typescript from 'rollup-plugin-typescript2';
+import typescript from 'rollup-plugin-typescript';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import { uglify } from 'rollup-plugin-uglify';
-import { main } from './package.json';
+import livereload from 'rollup-plugin-livereload';
+import serve from 'rollup-plugin-serve';
+import copy from 'rollup-plugin-copy';
+import svelte from 'rollup-plugin-svelte';
 
 const IS_PROD = !process.env.ROLLUP_WATCH;
 
-export default [
-  {
-    input: './src/background.ts',
-    output: { name: 'background', file: main, format: 'umd' },
-    plugins: [
-      typescript({
-        clean: IS_PROD,
-        cacheRoot: './.cache',
-        tsconfigOverride: IS_PROD ? { exclude: ['./src/tests'] } : undefined
-      }),
-      commonjs(),
-      resolve(),
-      IS_PROD && uglify()
-    ]
-  }
-];
+const configExtension = {
+  input: 'src/background/index.ts',
+  output: { name: 'background', file: 'dist/background.js', format: 'umd' },
+  plugins: [typescript(), commonjs(), resolve(), IS_PROD && uglify()]
+};
+
+const configPopup = {
+  input: 'src/popup/index.ts',
+  output: {
+    sourcemap: !IS_PROD,
+    format: 'iife',
+    name: 'app',
+    file: 'dist/bundle.js'
+  },
+  plugins: [
+    copy({ targets: [{ src: 'src/popup/index.html', dest: 'dist' }] }),
+    typescript(),
+    svelte({
+      dev: !IS_PROD,
+      css: css => {
+        css.write('dist/bundle.css', false);
+      }
+    }),
+    resolve(),
+    commonjs(),
+    !IS_PROD && serve({ contentBase: ['dist'], port: 1234 }),
+    !IS_PROD && livereload({ watch: 'dist' }),
+    IS_PROD && uglify()
+  ]
+};
+
+export default [configExtension, configPopup];

@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "lib": ["dom", "esnext"],
     "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "removeComments": true,
     "strict": true,
     "target": "es5"
   },
