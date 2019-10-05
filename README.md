@@ -7,26 +7,25 @@
 
 This project provides a boilerplate for developing Chrome extensions using [Svelte 3](https://svelte.dev).
 
-## Overview
+## Available Scripts
 
-### Develop
+### `yarn develop`
 
-```bash
-yarn develop
-```
+Runs the app in development mode with livereload enabled. Visit `http://localhost:1234` to view the app.
 
-### Build
+### `yarn build`
 
-```bash
-yarn build
-```
+Builds the app in production mode.
 
-### Test
+## Configuration
 
-This command runs tests located in the `src/tests` folder.
+To configure the template, modify the `outDir` and `port` values in the [package.json](package.json) "extension" field.
 
-```bash
-yarn test
+```json
+"extension": {
+  "outDir": "dist",
+  "port": 1234
+}
 ```
 
 ## Linting, formatting and committing
