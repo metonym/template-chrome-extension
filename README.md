@@ -3,9 +3,9 @@
 [![Build][build]][build-badge]
 [![Coverage][codecov-shield]][codecov]
 
-> Template for developing Chrome extensions.
+> Template for developing Chrome extensions with Svelte.
 
-This project provides a boilerplate for developing Chrome extensions.
+This project provides a boilerplate for developing Chrome extensions using [Svelte 3](https://svelte.dev).
 
 ## Overview
 

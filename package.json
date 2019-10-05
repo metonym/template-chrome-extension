@@ -2,7 +2,7 @@
   "name": "template-chrome-extension",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "Template for developing Chrome extensions",
+  "description": "Template for developing Chrome extensions with Svelte",
   "author": "Eric Liu (https://github.com/metonym)",
   "scripts": {
     "clean": "node scripts/clean.js",
