@@ -4,6 +4,10 @@
   "license": "MIT",
   "description": "Template for developing Chrome extensions with Svelte",
   "author": "Eric Liu (https://github.com/metonym)",
+  "extension": {
+    "outDir": "dist",
+    "port": 1234
+  },
   "scripts": {
     "clean": "node scripts/clean.js",
     "develop": "run-s clean && rollup -cw",

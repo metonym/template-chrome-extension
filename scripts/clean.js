@@ -1,17 +1,14 @@
 const fse = require('fs-extra');
-const { path } = require('./path');
+const path = require('path');
+const { extension } = require('../package.json');
 
-/**
- * Clean output directory and copy extension manifest
- * @param {Object} path
- */
-function clean(path) {
-  fse.removeSync(path.outDir);
-  fse.ensureDirSync(path.outDir);
+function clean() {
+  fse.removeSync(extension.outDir);
+  fse.ensureDirSync(extension.outDir);
   fse.copyFileSync(
-    `${path.inputDir}manifest.json`,
-    `${path.outDir}manifest.json`
+    path.join('src', 'manifest.json'),
+    path.join(extension.outDir, 'manifest.json')
   );
 }
 
-clean(path);
+clean();
