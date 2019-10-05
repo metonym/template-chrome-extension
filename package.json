@@ -5,10 +5,11 @@
   "description": "Template for developing Chrome extensions",
   "author": "Eric Liu (https://github.com/metonym)",
   "scripts": {
-    "develop": "yarn clean && rollup -cw",
-    "build": "yarn clean && rollup -c",
     "clean": "node scripts/clean.js",
+    "develop": "run-s clean && rollup -cw",
+    "build": "run-s clean && rollup -c",
     "lint": "tslint --fix -p . -c tslint.json",
+    "prettier": "prettier --write ./src/**.{ts,svelte}",
     "test": "jest --coverage",
     "test:tdd": "jest --watch"
   },
@@ -42,8 +43,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && pretty-quick --staged",
-      "pre-push": "yarn test",
+      "pre-commit": "run-s lint prettier",
+      "pre-push": "run-s test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
