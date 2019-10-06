@@ -19,7 +19,9 @@ Builds the app in production mode.
 
 ## Configuration
 
-To configure the template, modify the `outDir` and `port` values in the [package.json](package.json) "extension" field.
+### Development
+
+To change the destination folder or port (in development), edit the `outDir` and `port` values in [package.json](package.json).
 
 ```json
 "extension": {
@@ -27,6 +29,10 @@ To configure the template, modify the `outDir` and `port` values in the [package
   "port": 1234
 }
 ```
+
+### Template
+
+Edit the popup template in [src/popup/index.html](src/popup/index.html).
 
 ## Linting, formatting and committing
 
