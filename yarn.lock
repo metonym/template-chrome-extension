@@ -2196,13 +2196,13 @@ has@^1.0.0, has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hash-static@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/hash-static/-/hash-static-0.1.0.tgz#58a2c564c9963ca5345c4e6dabf3794a3a66a31d"
-  integrity sha512-oln3TrscTfTMyiltPhR1I+Axyp2zf+e1MjegO6W7ahlqLxGc1QauUwjP5OZdQJqgmjo9qNbsX7lC7D3cCGHXyA==
+hash-static@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/hash-static/-/hash-static-0.1.1.tgz#807af625f8956dc6ed5c918c439adabbb7d3a878"
+  integrity sha512-XOjS01G2DDr7kaV1O91DzwiXw4y88u7w0NwJylTSrRA7lr9H83KnVPyU0Skxyk4m7plj/j4kStZnFR5Ux6x5bw==
   dependencies:
     htmlnano "^0.2.4"
-    posthtml "^0.11.6"
+    posthtml "^0.12.0"
     posthtml-hash "^0.2.1"
 
 hasha@^5.0.0:
@@ -4439,6 +4439,14 @@ posthtml@^0.11.4, posthtml@^0.11.6:
   version "0.11.6"
   resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.11.6.tgz#e349d51af7929d0683b9d8c3abd8166beecc90a8"
   integrity sha512-C2hrAPzmRdpuL3iH0TDdQ6XCc9M7Dcc3zEW5BLerY65G4tWWszwv6nG/ksi6ul5i2mx22ubdljgktXCtNkydkw==
+  dependencies:
+    posthtml-parser "^0.4.1"
+    posthtml-render "^1.1.5"
+
+posthtml@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.12.0.tgz#6e2a2fcd774eaed1a419a95c5cc3a92b676a40a6"
+  integrity sha512-aNUEP/SfKUXAt+ghG51LC5MmafChBZeslVe/SSdfKIgLGUVRE68mrMF4V8XbH07ZifM91tCSuxY3eHIFLlecQw==
   dependencies:
     posthtml-parser "^0.4.1"
     posthtml-render "^1.1.5"
