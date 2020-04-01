@@ -24,7 +24,7 @@
     "@types/chrome": "^0.0.98",
     "@types/fs-extra": "^8.1.0",
     "@types/jest": "^25.1.4",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "hash-static": "^0.1.2",
     "husky": "^4.2.3",
     "jest": "^25.2.4",
