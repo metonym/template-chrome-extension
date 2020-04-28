@@ -9,61 +9,25 @@
     "port": 1234
   },
   "scripts": {
-    "clean": "node scripts/clean.js",
-    "develop": "run-s clean && rollup -cw",
-    "build": "run-s clean && rollup -c",
-    "postbuild": "hash-static dist/index.html",
-    "lint": "tslint --fix -p . -c tslint.json",
-    "prettier": "prettier --write ./src/**.{ts,svelte}",
-    "test": "jest --coverage",
-    "test:tdd": "jest --watch"
+    "develop": "node scripts/clean && rollup -cw",
+    "build": "node scripts/clean && rollup -c",
+    "postbuild": "hash-static dist/index.html"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@types/chrome": "^0.0.103",
+    "@types/chrome": "^0.0.106",
     "@types/fs-extra": "^8.1.0",
-    "@types/jest": "^25.1.4",
     "fs-extra": "^9.0.0",
     "hash-static": "^0.1.2",
-    "husky": "^4.2.3",
-    "jest": "^25.2.4",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.2",
-    "rollup": "^1.32.0",
+    "rollup": "^2.7.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-livereload": "^1.1.0",
+    "rollup-plugin-livereload": "^1.3.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-serve": "^1.0.1",
-    "rollup-plugin-svelte": "^5.1.1",
+    "rollup-plugin-svelte": "^5.2.1",
     "rollup-plugin-terser": "^5.3.0",
-    "rollup-plugin-typescript": "^1.0.1",
-    "svelte": "^3.20.1",
-    "ts-jest": "^25.3.0",
-    "tslib": "^1.11.1",
-    "tslint": "^6.1.0",
-    "tslint-config-prettier": "^1.18.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "svelte": "^3.21.0",
     "typescript": "^3.8.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "run-s lint prettier",
-      "pre-push": "run-s test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true
-  },
-  "jest": {
-    "preset": "ts-jest"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   }
 }
